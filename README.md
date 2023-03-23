@@ -76,5 +76,15 @@ morphologyEx(blur_img, Morphology, CV_MOP_OPEN, element);
 > When processing images in the OpenCV library, this function performs binarization based on a threshold in the image. Binarization means setting all pixel values in the image to 0 or 255, making the image black and white. It is often used to extract certain desired objects or features from an image.
 
 ### 1.4.1 Definition
+```c++
+double cv::threshold(
+    cv::InputArray src, // 입력 이미지
+    cv::OutputArray dst, // 출력 이미지
+    double thresh, // 임계값
+    double maxval, // 임계값보다 큰 값에 할당할 값
+    int type // 이진화 방법
+);
+```
+
 
 <img width="250" alt="image" src="https://user-images.githubusercontent.com/127065880/227134689-ac87a318-d719-48e0-8ea5-deeff2007f29.png">
