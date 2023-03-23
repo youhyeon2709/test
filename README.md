@@ -2,7 +2,7 @@
 
 # 1.Image preprocessing
 ## 1.1. IMREAD_GRAYSCALE
-> 이미지를 IMREAD_GRAYSCALE로 읽어옵니다.
+> Read the image as IMREAD_GRAYSCALE.
 ```c++
 src = imread("Lab_GrayScale_TestImage.jpg", IMREAD_GRAYSCALE);
 ```
@@ -11,7 +11,7 @@ src = imread("Lab_GrayScale_TestImage.jpg", IMREAD_GRAYSCALE);
 </div>
 
 ## 1.2. GaussianBlur
-> 가우시안 블러는 이미지의 노이즈를 감소시키거나 경계선 부드러움 효과를 적용할 때 사용됩니다.
+> Gaussian blur is used to reduce noise in an image or to apply a border softening effect.
 ### 1.2.1 Definition
 ``` c++
 
@@ -31,7 +31,7 @@ GaussianBlur(src, blur_img, Size(7, 7), 0);
 <img width="250" alt="image" src="https://user-images.githubusercontent.com/127065880/227125610-f18cc437-9aa6-4d71-bb33-ba49989176bb.png">
 
 ## 1.3. Morphology
-> 이미지를 확장하거나 축소하고, 노이즈를 제거하고, 경계를 강조하고, 객체의 크기를 변경하는 등의 다양한 연산을 수행할 수 있습니다.
+> You can expand or contract images, remove noise, highlight boundaries, change the size of objects, and more.
 ### 1.3.1 Definition
 ``` c++
 
@@ -50,8 +50,8 @@ void cv::morphologyEx	(InputArray src,
     * MORPH_OPEN : erode -> dilite
     * MORPH_ClOSE : dilite -> erode
     * MORPH_GRADIENT 
-  * **anchor**: kernel의 중심점
-  * **iterations**: 연산 반복 횟수
+  * **anchor**: The center point of the kernel
+  * **iterations**: Number of iterations of the operation
 
 ``` c++
 
@@ -61,7 +61,7 @@ void cv::morphologyEx	(int 	shape,
                         )	
 ```
 * **shape**: MORPH_RECT, MORPH_CROSS,MORPH_ELLIPSE 
-* **anchor**: kernel의 중심점
+* **anchor**: The center point of the kernel
 
 ### 1.3.2 Code
 
@@ -73,7 +73,7 @@ morphologyEx(blur_img, Morphology, CV_MOP_OPEN, element);
 
 
 ## 1.4. Threshold
-> OpenCV 라이브러리에서 이미지 처리를 할 때, 이미지의 임계값(threshold)을 기준으로 이진화(Binarization)를 수행하는 함수입니다. 이진화란, 이미지의 모든 픽셀 값을 0 또는 255로 설정하여, 이미지를 흑백으로 만드는 작업을 의미합니다. 이미지에서 원하는 특정 객체나 특징을 추출하기 위해 많이 사용됩니다.
+> When processing images in the OpenCV library, this function performs binarization based on a threshold in the image. Binarization means setting all pixel values in the image to 0 or 255, making the image black and white. It is often used to extract certain desired objects or features from an image.
 
 ### 1.4.1 Definition
 
