@@ -69,7 +69,7 @@ void cv::morphologyEx	(int 	shape,
 Mat element = getStructuringElement(MORPH_RECT, Size(5, 5));
 morphologyEx(blur_img, Morphology, CV_MOP_OPEN, element); 
 ```
-<img width="250" alt="image" src="https://user-images.githubusercontent.com/127065880/227134689-ac87a318-d719-48e0-8ea5-deeff2007f29.png">
+<img width="250" alt="image" src="https://user-images.githubusercontent.com/127065880/227135450-7c2f90c2-edce-467b-acc1-7f06938a7505.png">
 
 
 ## 1.4. Threshold
@@ -77,3 +77,4 @@ morphologyEx(blur_img, Morphology, CV_MOP_OPEN, element);
 
 ### 1.4.1 Definition
 
+<img width="250" alt="image" src="https://user-images.githubusercontent.com/127065880/227134689-ac87a318-d719-48e0-8ea5-deeff2007f29.png">
